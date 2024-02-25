@@ -2,7 +2,7 @@
 include_directories(${CMAKE_SOURCE_DIR}/src)
 
 # Google Testを探す
-add_subdirectory(external/include(GoogleTest))
+add_subdirectory(${CMAKE_SOURCE_DIR}/external/googletest))
 enable_testing()
 
 # テスト実行ファイルを追加
