@@ -21,8 +21,11 @@ add_executable(runTests
 target_link_libraries(runTests
     gtest_main # google tests
     dollar_lib
-    pthread
 )
+
+if(NOT WIN32)
+    target_link_libraries(runTests pthread)
+endif()
 
 include(GoogleTest)
 gtest_discover_tests(runTests)
