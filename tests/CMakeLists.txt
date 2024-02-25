@@ -2,8 +2,8 @@
 include_directories(${CMAKE_SOURCE_DIR}/src)
 
 # Google Testを探す
-find_package(GTest REQUIRED)
-include_directories(${GTEST_INCLUDE_DIRS})
+add_subdirectory(external/include(GoogleTest))
+enable_testing()
 
 # テスト実行ファイルを追加
 add_executable(runTests 
@@ -13,7 +13,10 @@ add_executable(runTests
 
 # テスト実行ファイルにリンク
 target_link_libraries(runTests     
-    ${GTEST_LIBRARIES} 
+    gtest_main # google tests
     dollar_lib
     pthread
 )
+
+include(GoogleTest)
+gtest_discover_tests(runTests)
