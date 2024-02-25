@@ -5,6 +5,12 @@ project(tdd_cpp VERSION 1.0) # プロジェクト名とバージョン指定
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+
+# Windowsの場合のみ、DLLバージョンのランタイムライブラリを強制する
+if(WIN32)
+    set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+endif()
+
 # サブディレクトリを追加
 add_subdirectory(src)
 add_subdirectory(tests)
