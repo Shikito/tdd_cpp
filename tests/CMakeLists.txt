@@ -1,8 +1,9 @@
 # srcをインクルードパスに追加
 include_directories(${CMAKE_SOURCE_DIR}/src)
 
-# Google Testを探す
-add_subdirectory(${CMAKE_SOURCE_DIR}/external/googletest)
+# Google Testがプロジェクトのルートディレクトリの外部ディレクトリにある場合
+add_subdirectory(${PROJECT_SOURCE_DIR}/external/googletest ${PROJECT_BINARY_DIR}/googletest)
+
 enable_testing()
 
 # テスト実行ファイルを追加
