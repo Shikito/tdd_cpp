@@ -13,7 +13,7 @@ enable_testing()
 
 # テスト実行ファイルを追加
 add_executable(runTests
-    test_main.cpp
+    # test_main.cpp
     MoneyTest.cpp
 )
 
