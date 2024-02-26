@@ -9,3 +9,9 @@ mkdir build && cd build
 cmake ..
 make
 ```
+
+or 
+
+```shell
+./tkbuild.sh
+```
