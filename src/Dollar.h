@@ -3,7 +3,7 @@
 
 class Dollar{
 public:  
-    Dollar(int amount);
+    Dollar(int initial_amount);
     int amount;
     void times(int multiplier);
 };
