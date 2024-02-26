@@ -21,6 +21,7 @@ add_executable(runTests
 target_link_libraries(runTests
     gtest_main # google tests
     dollar_lib
+    franc_lib
 )
 
 if(NOT WIN32)
