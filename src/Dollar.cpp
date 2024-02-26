@@ -7,3 +7,7 @@ Dollar::Dollar(int initial_amount){
 Dollar Dollar::times(int multiplier){
     return Dollar(amount * multiplier);
 };
+
+bool Dollar::equals(Dollar other){
+    return amount == other.amount;
+};
