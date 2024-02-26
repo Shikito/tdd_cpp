@@ -4,11 +4,12 @@
 class Dollar{
 public:  
     //コンストラクタ
-    Dollar(int initial_amount);
-    int amount;
-
+    explicit Dollar(int initial_amount) : amount(initial_amount){};
     //メンバ関数
-    Dollar times(int multiplier);
-    bool equals(Dollar other);
+    Dollar times(int multiplier) {return Dollar(amount * multiplier);};
+    bool operator==(const Dollar &other) const { return amount == other.amount; };
+    bool operator!=(const Dollar &other) const { return !(*this == other); };
+private:
+    int amount;
 };
 #endif
