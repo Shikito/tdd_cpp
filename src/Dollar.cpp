@@ -4,6 +4,6 @@ Dollar::Dollar(int initial_amount){
     amount = initial_amount;
 };
 
-void Dollar::times(int multiplier){
-    amount *= multiplier;
+Dollar Dollar::times(int multiplier){
+    return Dollar(amount * multiplier);
 };

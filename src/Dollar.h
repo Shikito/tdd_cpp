@@ -5,6 +5,6 @@ class Dollar{
 public:  
     Dollar(int initial_amount);
     int amount;
-    void times(int multiplier);
+    Dollar times(int multiplier);
 };
 #endif
